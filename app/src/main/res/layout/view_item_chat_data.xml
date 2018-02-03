@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <ImageView
+        android:id="@+id/iv_sent_photo"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_marginTop="@dimen/margin_medium_2"
+        android:layout_alignParentEnd="true"
+        android:layout_marginEnd="@dimen/margin_large"
+        android:src="@mipmap/ic_launcher"
+        android:visibility="gone" />
+
+    <de.hdodenhof.circleimageview.CircleImageView
+        android:id="@+id/iv_me"
+        android:layout_width="48dp"
+        android:layout_height="48dp"
+        android:layout_alignBaseline="@id/tv_text"
+        android:layout_alignParentRight="true"
+        android:layout_below="@id/iv_sent_photo"
+        android:src="@mipmap/ic_launcher_round" />
+
+    <TextView
+        android:id="@+id/tv_text"
+        style="@style/AccentBorderButton"
+        android:layout_width="200dp"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/iv_sent_photo"
+        android:layout_marginTop="@dimen/margin_medium"
+        android:layout_toLeftOf="@id/iv_me"
+        android:padding="@dimen/margin_medium"
+        android:text="Helllo, Buddy!" />
+
+
+</RelativeLayout>

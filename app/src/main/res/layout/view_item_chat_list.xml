@@ -1,0 +1,56 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:card_view="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:clickable="true"
+    android:foreground="@drawable/ripple_primary"
+    card_view:cardBackgroundColor="@color/white"
+    card_view:cardCornerRadius="1dp"
+    card_view:cardElevation="2dp">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingEnd="@dimen/margin_medium"
+        android:paddingStart="@dimen/margin_medium">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/iv_friend"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/margin_small"
+            android:src="@mipmap/ic_launcher_round" />
+
+        <ImageView
+            android:id="@+id/iv_more"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:src="@drawable/ic_more_vert_24dp" />
+
+        <TextView
+            android:id="@+id/tv_friend_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignTop="@id/iv_friend"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_toEndOf="@id/iv_friend"
+            android:layout_toStartOf="@id/iv_more"
+            android:textColor="@color/primary_text"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/tv_conversations"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_alignLeft="@id/tv_friend_name"
+            android:layout_below="@id/tv_friend_name"
+            android:layout_marginStart="@dimen/margin_medium"
+            android:layout_marginTop="@dimen/margin_medium"
+            android:layout_toStartOf="@id/iv_more"
+            android:textColor="@color/secondary_text" />
+    </RelativeLayout>
+</android.support.v7.widget.CardView>
